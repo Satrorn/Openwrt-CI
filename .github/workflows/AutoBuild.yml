@@ -27,8 +27,8 @@ jobs:
       fail-fast: false
       matrix:
         CONFIG: [X86_64,Cudy_Tr3000] #
-        SOURCE: [https://github.com/fanchmwrt/fanchmwrt]
-        BRANCH: [openwrt-24.10.4]
+        SOURCE: [fanchmwrt/fanchmwrt]
+        BRANCH: [fanchmwrt-24.10.4]
 
     uses: ./.github/workflows/OpenWrt-CI.yml
     with:
@@ -39,7 +39,7 @@ jobs:
       #默认主机名
       WRT_NAME: Openwrt
       #默认地址
-      WRT_IP: 192.168.31.1
+      WRT_IP: 192.168.1.1
       #源码链接
       WRT_REPO: https://github.com/${{matrix.SOURCE}}.git
       #源码分支
